@@ -1,3 +1,8 @@
+# Remove the idea folder from git
 .idea/
+
+# Remove the dist folder from git
 dist/
+
+# Remove the iml file from git
 *.iml
