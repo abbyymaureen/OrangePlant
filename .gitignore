@@ -6,3 +6,6 @@ dist/
 
 # Remove the iml file from git
 *.iml
+
+# Remove the .out files
+out/
