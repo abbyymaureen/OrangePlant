@@ -9,3 +9,10 @@ dist/
 
 # Remove the .out files
 out/
+
+# Remove the .DS_Store files
+.DS_Store
+
+# Don't put local file on Github unrelated to project (oops)
+# In this folder for notes mostly and laziness to migrate to a different folder
+src/SyncDemo.java
