@@ -1,13 +1,14 @@
 package src;
+
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
 
 /**
  * Worker Class - IMPORTANT
  * The worker class uses Mutex to each have their own thread
- *
+ * <p>
  * Important functions:
- *
+ * <p>
  * run - the process implementation for oranges that a worker must do
  */
 public class Worker implements Runnable {
@@ -20,11 +21,12 @@ public class Worker implements Runnable {
 
     /**
      * Constructor to create a worker
-     *
+     * <p>
      * Use a BlockingQueue for mutex
      * Refer to article: https://www.baeldung.com/java-blocking-queue
-     * @param queue - BlockingQueue - mutex implementation for workers/oranges
-     * @param plant - Plant - the plant where the worker is working
+     *
+     * @param queue  - BlockingQueue - mutex implementation for workers/oranges
+     * @param plant  - Plant - the plant where the worker is working
      * @param worker - Worker - the person working
      */
     public Worker(BlockingQueue<Orange> queue, Plant plant, String worker) {

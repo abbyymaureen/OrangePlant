@@ -8,9 +8,9 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * Plant Class - Manages workers and multiple plants
  * Modified from Professor Nathan Williams' Multi-Plant Class
- *
+ * <p>
  * Important Methods:
- *
+ * <p>
  * startPlant - starts up the plant (similar to unlocking the door and allowing work to start)
  * stopPlant - stops the plant (similar to halting work for the day)
  * waitToStop - process is running still but needs to stop soon
@@ -53,6 +53,7 @@ public class Plant implements Runnable {
 
     /**
      * Constructor
+     *
      * @param threadNum int - number of threads needed
      */
     Plant(int threadNum) {
@@ -64,7 +65,7 @@ public class Plant implements Runnable {
 
     /**
      * Starts up the plant
-     *
+     * <p>
      * Example: similar to unlocking the door and allowing work to start
      */
     public void startPlant() {
@@ -79,7 +80,7 @@ public class Plant implements Runnable {
 
     /**
      * Stops the plant
-     *
+     * <p>
      * Example: similar to halting work for the day
      */
     public void stopPlant() {
@@ -101,7 +102,7 @@ public class Plant implements Runnable {
             if (!workerPool.awaitTermination(2000, TimeUnit.MILLISECONDS)) {
                 workerPool.shutdownNow();
             }
-        // Ignore interrupted exception and shutdown the worker pool
+            // Ignore interrupted exception and shutdown the worker pool
         } catch (InterruptedException ignore) {
             workerPool.shutdownNow();
         }
@@ -113,7 +114,7 @@ public class Plant implements Runnable {
     public void waitToStop() {
         try {
             thread.join();
-        // Ignore the interrupted exception and print that there was a malfunction
+            // Ignore the interrupted exception and print that there was a malfunction
         } catch (InterruptedException ignore) {
             System.err.println(thread.getName() + " stop malfunction");
         }
@@ -220,7 +221,7 @@ public class Plant implements Runnable {
 
         try {
             Thread.sleep(Plant.PROCESSING_TIME);
-        // Print that the main (controller) thread was interrupted
+            // Print that the main (controller) thread was interrupted
         } catch (InterruptedException ignore) {
             System.err.println("Main thread interrupted");
         }
