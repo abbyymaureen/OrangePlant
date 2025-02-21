@@ -54,3 +54,5 @@ This application can be run using Ant. To run, please follow these direction.
 
 - [Concurrency and Parallelism in Java](https://medium.com/@peterlee2068/concurrency-and-parallelism-in-java-f625bc9b0ca4) -
   A helpful article on Java concurrency, multithreading, and parallelization.
+- ChatGPT - Found the error where I failed to START the plants (silly mistake).
+- Nathan Williams - Multiple class files provided, helped to create an excellent boilerplate.
