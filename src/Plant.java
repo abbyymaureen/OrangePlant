@@ -13,7 +13,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * <p>
  * startPlant - starts up the plant (similar to unlocking the door and allowing work to start)
  * stopPlant - stops the plant (similar to halting work for the day)
- * waitToStop - process is running still but needs to stop soon
+ * waitToStop O- process is running still but needs to stop soon
  * run - the process of running a plant
  * incrementProcess - the process was run, so increment it
  * getProvidedOranges - track the number of oranges used
